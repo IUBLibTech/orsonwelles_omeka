@@ -1,0 +1,117 @@
+/* CSS Document */
+
+/*.grid.well-aligned-logos {
+    margin: 0 0; 
+}
+*/
+#content {
+    margin-top: 0px;
+}
+
+.collection_image {
+	background-color: blue;
+	margin-bottom: 2em;
+}
+.player {
+	height: 55px;
+}
+#solr-facets {
+	width: 100%;
+	margin-left: 80%;
+	background-color: rgb(250,250,250); 
+}
+
+#solr-results {
+	margin-left: 40%;
+}
+
+#solr-facets > ul {
+	list-style-type: none;
+}
+
+ul.hl {
+	list-style-type: none;
+}
+
+#solr-search-form span.float-wrap {
+	display: block;
+	padding-right: 10px;
+	overflow: hidden;
+	
+}
+
+#solr-applied-facets ul {
+	margin: 0 0 10px 20%;
+	padding: 0;
+	font-size: 1.2em;
+}
+
+input#query {
+	width: 20%;
+	float: left;
+	margin-left: 65%;
+	margin-top: -6.5rem;
+	height: 1.5rem;
+	background-color: rgb(250,250,250,0.88);
+	padding: 0 0 0 5px;
+}
+
+button#submit_search {
+	margin: -6.2em 8px 10px 1px;
+	padding: 0;
+	float:left;
+	width: 10%;
+	margin-left:85%;
+	font-family: 'BentonSansRegular', sans-serif;
+	background-color: transparent;
+}
+button#submit_search:hover {
+	border-color: transparent;
+}
+button#submit_search span:after {
+	content: "Search";
+}
+footer.disclaimer {
+    margin: 0 14px;
+    font-size: 11px;
+    text-align: left;
+    letter-spacing: normal;
+}
+
+footer.disclaimer a {
+    color: #7d110c;
+}
+
+footer.disclaimer a:hover {
+    color: #000;
+}
+
+footer.design-credit .disclaimer {
+        float: left;
+        text-align: left;
+}
+
+div.element-text {
+	float:left;
+	width: 70%;
+	margin-left: 25%;
+	margin-top: -.35em;
+	font-size: 1.2em;
+}
+
+.element > h3 {
+	clear:both;
+	margin-bottom: -.75em;
+	font-size: 1.35em;
+}
+
+#search-filters > ul {
+	list-style-type: none;
+	width: 70%;
+	margin-left 25%;
+}
+
+#search-results > tbody > tr > td:nth-child(2) > a.image > img {
+	width: 10%;
+}
+

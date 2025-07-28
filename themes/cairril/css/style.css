@@ -1,0 +1,636 @@
+.center {
+    text-align: center;
+}
+
+.main-banner, #content, .featured-quote-and-image {
+    font-family: 'BentonSansRegular', sans-serif;
+    letter-spacing: -0.05em;
+}
+
+.main-banner .button, #content .button {
+    font-family: 'BentonSansBold', sans-serif;
+    border-radius: 0px;
+    background-color: #7d110c;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+}
+
+.main-banner .button:focus,
+#content .button:focus {
+    color: white;
+}
+
+.main-banner {
+    background-color: #b0b2b4;
+    margin-top: -15px;
+    padding: 25px 0 0.5rem;
+    padding-top: calc( 0.5rem + 17px );
+}
+
+.main-banner .row {
+    padding: 0 14px;
+}
+
+.main-banner #divSiteTitle {
+    max-width: 60%;
+    margin: 0;
+    float: left;
+}
+
+.main-banner #divSiteTitle .site-title-block {
+    margin: 0.6rem 0;
+    font-family: 'BentonSansBold', sans-serif;
+    font-size: 18px;		/* x-small only... see min-width: 400px below */
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 1.15;
+}
+
+@media screen and (min-width: 400px) {
+    .main-banner #divSiteTitle .site-title-block {
+	font-size: 23px;
+    }
+}
+
+.main-banner #divSiteTitle .site-title-block a,
+.main-banner #divSiteTitle .site-title-block a:visited {
+    color: white;
+}
+
+
+@media screen and (min-width: 40em) {
+    .main-banner #divSiteTitle {
+	max-width: 64rem;
+	margin: 0 auto;
+	float: none;
+    }
+    
+    .main-banner #divSiteTitle .site-title-block {
+	font-size: 30px;
+    }
+}
+    
+
+@media screen and (max-width: 1024px) {
+    .main-banner {
+	margin-top: 51px;
+	padding-top: 0.5rem;
+    }
+}
+
+.main-banner .hamburger-icon {
+    display: block;
+    text-align: right;
+    margin: 0.6rem 0 0;
+
+    z-index: 9;
+
+    max-width: 35%;
+    float: right;
+    padding: 0 14px 0 0;
+}
+
+.main-banner .hamburger-icon .button {
+    font-size: 18px;		/* x-small only... see min-width: 400px below */
+}
+
+@media screen and (min-width: 400px) {
+    .main-banner .hamburger-icon .button {
+	font-size: 23px;
+    }
+}
+    
+#primary-nav-wrapper {
+    margin-top: 0px;
+    z-index: 9;
+    position: relative;
+    clear: both;
+}
+
+#primary-nav-wrapper #primary-nav {
+    display: none;
+}
+
+#primary-nav-wrapper ul.primary-nav {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#primary-nav-wrapper ul.primary-nav li {
+    font-family: 'BentonSansBold', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: left;
+    text-transform: none;
+}
+
+#primary-nav-wrapper ul.primary-nav li.separator {
+    font-family: 'BentonSansRegular', sans-serif;
+    font-weight: normal;
+    text-align: center;
+    display: none;
+}
+
+#primary-nav-wrapper ul.primary-nav li.separator span.pipe {
+    color: transparent;
+    border-right: #ccc solid 1px;
+    font-size: 1rem;
+    position: relative;
+    bottom: 4px;
+}
+
+#primary-nav-wrapper ul.primary-nav li img.listen-icon {
+    padding-right: 0.5em;
+    display: inline-block;
+    position: relative;
+    top: -3px;    
+}
+
+#primary-nav-wrapper ul.primary-nav li a,
+#primary-nav-wrapper ul.primary-nav li a:visited {
+    color: #7d110c;
+}
+
+#primary-nav-wrapper ul.primary-nav li a:hover,
+#primary-nav-wrapper ul.primary-nav li a:active {
+    color: #000;
+}
+
+#primary-nav-wrapper ul.primary-nav li a.expand-child-menu {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    color: transparent;
+    background-image: url(images/down-arrow.png);
+    display: block;
+    height: 34px;
+    width: 34px;
+    background-size: cover;
+}
+
+#primary-nav-wrapper ul.primary-nav li.expanded-child-menu a.expand-child-menu {
+    background-image: url(images/up-arrow.png);
+}
+
+#primary-nav-wrapper ul.primary-nav ul.sub-menu {
+    display: none;
+    list-style: none;
+    position: relative;
+    border: none;
+    margin: 0 0;    
+}
+
+#primary-nav-wrapper ul.primary-nav ul.sub-menu li {
+    text-align: left;
+    font-size: 1rem;
+    text-transform: none;
+    padding: 0.2em 0 0.4em 1em;
+    line-height: 1.1;
+}
+
+#primary-nav-wrapper ul.primary-nav ul.sub-menu li a {
+}
+
+@media screen and (min-width: 40em) {
+    #primary-nav-wrapper {
+    }
+
+    .main-banner .hamburger-icon {
+	display: none;
+    }
+
+    #primary-nav-wrapper #primary-nav {
+	display: block !important;
+    }
+
+    #primary-nav-wrapper ul.primary-nav {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: space-evenly;
+	-ms-flex-pack: space-evenly;
+	justify-content: space-evenly;
+    }
+
+    #primary-nav-wrapper ul.primary-nav li {
+	flex: 1 0 auto;
+	text-align: center;
+	text-transform: uppercase;
+    }
+    
+    #primary-nav-wrapper ul.primary-nav li.separator {
+	display: list-item;
+    }
+
+    #primary-nav-wrapper ul.primary-nav li img.listen-icon {
+	position: absolute;
+	left: 0;
+	top: 2px;
+    }
+
+    #primary-nav-wrapper ul.primary-nav li a,
+    #primary-nav-wrapper ul.primary-nav li a:visited {
+	color: #6d6e70;
+    }
+
+    #primary-nav-wrapper ul.primary-nav li a.expand-child-menu {
+	display: none;
+    }
+    
+    #primary-nav-wrapper ul.primary-nav ul.sub-menu {
+	display: none;
+	list-style: none;
+	position: absolute;
+	border: grey solid 1px;
+	margin: -7px 0 0 -6px;    
+    }
+
+    #primary-nav-wrapper ul.primary-nav li:hover ul.sub-menu {
+	display: block;
+	visibility: visible;
+	opacity: 1;
+    }
+
+    #primary-nav-wrapper ul.primary-nav ul.sub-menu li {
+	text-align: left;
+	font-size: 1rem;
+	text-transform: none;
+	background-color: white;
+	padding: 0.3em 0.3em;
+	border-bottom: grey solid 1px;
+    }
+
+    #primary-nav-wrapper ul.primary-nav li:hover ul.sub-menu li {
+    }
+
+    #primary-nav-wrapper ul.primary-nav ul.sub-menu li a {
+	color: #7d110c;
+    }
+
+    #primary-nav-wrapper ul.primary-nav ul.sub-menu li a:hover,
+    #primary-nav-wrapper ul.primary-nav ul.sub-menu li a:active {
+	color: #000;
+    }
+    
+}
+
+
+.grid>.grid-item.one-quarter.show-for-medium+.grid-item.three-quarters {
+    margin-top: 0;
+}
+
+.grid.well-aligned-logos {
+    text-align: center;
+    margin: 1rem 0 3rem;
+}
+
+@media screen and (min-width: 40em) {
+    .grid>.grid-item.one-quarter {
+	float: left;
+	width: 25%;
+	clear: none;
+    }
+    
+    .grid>.grid-item.three-quarters {
+	float: left;
+	width: 75%;
+	clear: none;
+    }
+
+    .grid.well-aligned-logos {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    }
+}
+
+.featured-quote-and-image .section {
+    padding: 14px;
+}
+
+.featured-quote-and-image .section .row {
+    background-color: white;
+}
+
+.featured-quote-and-image .section .featured-quote blockquote {
+    color: #2d6380;
+    font-style: italic;
+    font-size: 1.3rem;
+    font-weight: normal;
+    margin: 1.5rem 0 0 0;
+
+    border: none;
+    padding: 0 0.3rem;
+}
+
+.featured-quote-and-image .section .featured-quote blockquote .the-quote {
+    line-height: 1.3;
+}
+
+.featured-quote-and-image .section .featured-quote blockquote .the-quote::before {
+    content: '\201C';
+}
+
+.featured-quote-and-image .section .featured-quote blockquote .the-quote::after {
+    content: '\201D';
+}
+
+.featured-quote-and-image .section .featured-quote blockquote .blockquote-footer::before {
+    content: '- ';
+}
+
+
+@media screen and (min-width: 40em) {
+    .featured-quote-and-image .section {
+	padding: 0;
+    }
+
+    .featured-quote-and-image .section .row {
+	background-color: #2d6380;
+    }
+
+    .featured-quote-and-image .section .featured-quote blockquote {
+	color: #f8f3d2;
+	padding: 0 4% 0 10%;
+	font-size: 2.3vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .featured-quote-and-image .section .featured-quote blockquote {
+	font-size: 1.5rem;
+    }
+}
+
+#content {
+    margin-top: 2.25rem;
+}
+
+#home #content {
+    margin-top: 0.5rem;
+}
+
+#primary {
+    padding: 14px;
+}
+
+#primary a,
+#primary a:visited {
+    color: #7d110c;
+    border-bottom: #DAA solid 1px;
+    text-decoration: none !important;
+    /* the next two lines are a trick that could move the "underline" closer to the text */
+    display: inline-block;
+    line-height: 1.1;
+}
+
+#primary a:hover,
+#primary a:active {
+    color: #000;
+    border-bottom-color: transparent;
+}
+
+#primary .section {
+    padding: 0;
+}
+
+#primary .section.breakout {
+    padding: 1.5rem 0;
+    background-color: #7d110c;
+}
+
+#primary .section.breakout .grid.halves .grid-item {
+    font-size: 1.5rem;
+    padding: 0 2.5rem;
+}
+
+#primary .section.breakout .grid.halves .grid-item:first-child {
+    border-right: #C4BCCA solid 2px;
+}
+
+#primary .section.breakout .grid.halves .grid-item a,
+#primary .section.breakout .grid.halves .grid-item a:visited {
+    color: white;
+    display: inline;
+    border-bottom: #DAA solid 1px;
+    text-decoration: none !important;
+}
+
+#primary .section.breakout .grid.halves .grid-item a:hover {
+    color: #000;
+    border-bottom-color: transparent;
+}
+
+#primary h1 {
+    font-family: 'BentonSansBold', sans-serif;
+    font-weight: bold;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.8px;
+}
+
+#primary h2 {
+    font-family: 'BentonSansBold', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: none;
+    color: #2d6380;
+    margin-bottom: 0.5rem;
+}
+
+.listen {
+    display: none; 		/* only display on tablets and larger */
+    letter-spacing: 0;
+    font-size: 1.2rem;
+    color: #7d110c;
+    /*     padding: 0 60px; */
+    padding: 0 35px 0 85px;
+    background: url(images/listen_icon_blue.gif) 25px 7px no-repeat;
+    margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 40em) {
+    #primary .section.breakout .grid.halves .grid-item {
+	padding: 0 6rem;
+    }
+
+    .listen {
+	display: block; 		/* only display on tablets and larger */
+    }
+}
+
+
+.listen .listen-label {
+    font-family: 'BentonSansBold', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.listen .listen-list {
+    font-family: 'BentonSansRegular', sans-serif;
+    list-style-type: none;
+    display: inline;
+    margin: 0;
+}
+
+.listen .listen-list li {
+    display: inline;
+    padding: 0 0.5em 0 0.2em;
+    border-right: #7d110c solid 1px;
+    font-size: 1.2rem;
+}
+
+.episode-info h2 {
+    font-weight: bold;
+}
+
+#primary .search-result hgroup h1 a,
+#primary .search-result hgroup h1 a:visited,
+#primary .search-result hgroup h2 a,
+#primary .search-result hgroup h2 a:visited,
+.episode-info a,
+.episode-info a:visited {
+    font-size: 1.4rem;
+    text-decoration: none !important;
+    /* the next two lines are a trick that could move the "underline" closer to the text */
+    display: inline-block;
+    line-height: 1.1;
+    color: #7d110c;
+    border-bottom: #DAA solid 1px;
+}
+
+/*     color: #7d110c; */
+/*     text-decoration: underline; */
+/* } */
+
+/*     text-decoration: none; */
+/*     color: #000; */
+/* } */
+
+
+#primary .search-result hgroup h1 a:hover,
+#primary .search-result hgroup h1 a:active,
+#primary .search-result hgroup h2 a:hover,
+#primary .search-result hgroup h2 a:active,
+.episode-info a:hover,
+.episode-info a:active {
+    color: #000;
+    border-bottom-color: transparent;
+}
+
+
+footer.design-credit {
+    margin: 0 14px;
+    font-size: 11px;
+    text-align: right;
+    letter-spacing: normal;
+}
+
+footer.design-credit a {
+    color: #7d110c;
+}
+
+footer.design-credit a:hover {
+    color: #000;
+}
+
+body#item .episode-title h2 {
+    font-family: 'BentonSansBold', sans-serif;
+    font-weight: bold;
+    color: #7d110c;
+    font-size: 1.8rem;
+}
+
+body#item h3.disclaimer {
+    font-family: 'BentonSansRegular', sans-serif;
+    font-weight: normal;
+    color: #7d110c;
+    font-size: 1rem;
+    letter-spacing: 0;
+}
+
+body#item .left-sidebar {
+    font-family: 'BentonSansBold', sans-serif;
+}
+
+.left-sidebar div.featured-image,
+.left-sidebar nav {
+    padding-left: 4rem;
+}
+
+@media screen and (min-width: 1052px) {
+    .left-sidebar div.featured-image,
+    .left-sidebar nav {
+	margin-left: 14px;
+	padding-left: 50px;
+	padding-left: calc( 4rem - 14px );
+    }
+}
+
+.left-sidebar div.featured-image {
+    background-color: #2d6380;
+}
+
+.left-sidebar div.featured-image img {
+    max-height: 100%;
+}
+
+body#item .left-sidebar nav ul {
+    list-style-type: none;
+    margin: 1rem 0;
+    padding-left: 0;
+    font-size: 1.1rem;
+}
+
+body#item .left-sidebar nav ul a,
+body#item .left-sidebar nav ul a:visited {
+    font-weight: bold;
+    text-decoration: underline;
+    letter-spacing: 0;
+}
+
+body#item .left-sidebar nav ul a:hover,
+body#item .left-sidebar nav ul a:active {
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+div.undone {
+    background-color: #bdbdae;
+    padding: 0.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 1rem 0;
+}
+
+div.undone.pageturner {
+    min-height: 25rem;
+}
+
+#primary .search-result {
+    margin-bottom: 2rem;
+}
+
+#primary .search-result hgroup h1 {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+#primary .search-result hgroup h2 {
+    font-family: 'BentonSansRegular', sans-serif;
+    font-weight: normal;
+    font-size: 1.4rem;
+}
+
+#primary .search-result hgroup h1,
+#primary .search-result hgroup h2 {
+    text-transform: none;
+}
+
+/* for <a> styling, see above (along with .episode-info  */
