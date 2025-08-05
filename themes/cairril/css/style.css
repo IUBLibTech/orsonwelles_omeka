@@ -22,7 +22,7 @@
 }
 
 .main-banner {
-    background-color: #9c9ea0;
+    background-color: #828486;
     margin-top: -15px;
     padding: 25px 0 0.5rem;
     padding-top: calc( 0.5rem + 17px );
@@ -233,7 +233,7 @@
 
     #primary-nav-wrapper ul.primary-nav li a,
     #primary-nav-wrapper ul.primary-nav li a:visited {
-	color: #6d6e70;
+	color: #1b1b1c;
     }
 
     #primary-nav-wrapper ul.primary-nav li a.expand-child-menu {
