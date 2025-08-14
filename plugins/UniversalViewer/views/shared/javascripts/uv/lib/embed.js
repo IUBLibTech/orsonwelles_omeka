@@ -495,7 +495,7 @@ docReady(function() {
                 socket = new easyXDM.Socket({
                     remote: uri,
                     container: $app.get(0),
-                    props: { style: { width: "100%", height: $app.height() + "px" }, scrolling: "no" },
+                    props: { style: { width: "100%", height: $app.height() + "px" }, scrolling: "no", title: $app.attr('data-title') },
                     onReady: function () {
                         $appFrame = $app.find('iframe');
                         if (defaultToFullScreen) {
