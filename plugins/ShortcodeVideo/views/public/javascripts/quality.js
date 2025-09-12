@@ -65,7 +65,7 @@ Object.assign(MediaElementPlayer.prototype, {
 		for (var _i = 0, _total = qualities.length; _i < _total; _i++) {
 			var src = qualities[_i],
 				quality = src instanceof HTMLElement ? src.getAttribute('data-quality') : src['data-quality'],
-				inputId = t.id + '-qualities-' + quality;
+				inputId = t.id + '-qualities-' + quality + '-' + _i;
 
 			player.qualitiesButton.querySelector('ul').innerHTML += '<li class="' + t.options.classPrefix + 'qualities-selector-list-item">' + ('<input class="' + t.options.classPrefix + 'qualities-selector-input" type="radio" name="' + t.id + '_qualities"') + ('disabled="disabled" value="' + quality + '" id="' + inputId + '"  ') + ((quality === defaultValue ? ' checked="checked"' : '') + '/>') + ('<label for="' + inputId + '" class="' + t.options.classPrefix + 'qualities-selector-label') + ((quality === defaultValue ? ' ' + t.options.classPrefix + 'qualities-selected' : '') + '">') + ((src.title || quality) + '</label>') + '</li>';
 		}
