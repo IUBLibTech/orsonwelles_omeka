@@ -22,22 +22,23 @@ $sortLinks[__('Date Added')] = 'added';
 <!--<div class="collection">-->
 <div class="row">
  <div class="grid"><!-- use show-for-medium only if the one-quarter is empty. This prevents empty space on small viewports -->
-   <div class="grid-item one-quarter show-for-medium">
-  
-  	<?php if ($collection_name = str_replace(' ', '_', strtolower(metadata('collection', array('Dublin Core', 'Title'))))) :?>
-	<div class="collection_image">
-		<img src="<?php
-				  try  {
-  					 $collection_name = str_replace('(', '', $collection_name );
-					 $collection_name = str_replace(')', '', $collection_name );
+     <div class="grid-item one-quarter show-for-medium">
 
-					 echo img($collection_name . '.jpg', 'images/collection_images'); 
-				  } catch (Exception $e) {
-					 echo img('default.jpg', 'images/collection_images');
-				  }
-				  ?>">
-	</div>	
-     <?php endif; ?>
+     <?php if ($collection_name = str_replace(' ', '_', strtolower(metadata('collection', array('Dublin Core', 'Title'))))) :?>
+     <div class="collection_image">
+             <?php
+                 try  {
+                     $collection_name = str_replace('(', '', $collection_name );
+                     $collection_name = str_replace(')', '', $collection_name );
+                     $filename = $collection_name . '.jpg';
+                     $alt_text = ucwords(str_replace('_', ' ', preg_replace('/\.jpg$/', '', $filename)));
+                     echo '<img src="' . img($filename, 'images/collection_images') . '" alt="' . htmlspecialchars($alt_text) . '" />';
+                 } catch (Exception $e) {
+                     echo '<img src="' . img('default.jpg', 'images/collection_images') . '" alt="Default Program Image" />';
+                 }
+             ?>
+     </div>   
+        <?php endif; ?>
     </div> <!-- .grid-item -->
  
   	<div class="grid-item three-quarters">
