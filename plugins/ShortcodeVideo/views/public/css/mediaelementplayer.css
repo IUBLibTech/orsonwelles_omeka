@@ -231,15 +231,17 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
     border: 0;
     cursor: pointer;
     display: block;
-    font-size: 0;
+    font-size: 1em;
     height: 20px;
-    line-height: 0;
+    line-height: normal;
     margin: 10px 6px;
-    overflow: hidden;
+    overflow: visible;
     padding: 0;
     position: absolute;
     text-decoration: none;
     width: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 /* :focus for accessibility */
