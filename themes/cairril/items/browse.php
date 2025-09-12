@@ -9,7 +9,13 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 <div class="grid-item one-quarter featured-quote">
 <div class="the-quote">&nbsp;</div>
 </div>
-<div class="grid-item three-quarters"><img src="<?php echo img('this_is_my_best.jpg', 'images/collection_images'); ?>" alt="" /></div>
+<div class="grid-item three-quarters">
+    <?php
+        $filename = 'this_is_my_best.jpg';
+        $alt_text = ucwords(str_replace('_', ' ', preg_replace('/\.jpg$/', '', $filename)));
+    ?>
+    <img src="<?php echo img($filename, 'images/collection_images'); ?>" alt="<?php echo htmlspecialchars($alt_text); ?>" />
+</div>
 <!-- .grid-item --></div>
 <!-- .grid --></div>
 <!-- .row --></div>

@@ -10,16 +10,18 @@ $collectionTitle = metadata('collection', 'display_title');
 	      <!-- use show-for-medium only if the one-quarter is empty. This prevents empty space on small viewports -->
 	      <div class="grid-item one-quarter featured-quote show-for-medium">&nbsp;</div>
 	      <div class="grid-item three-quarters">
-	      <?php if ($collection_name = str_replace(' ', '_', strtolower(metadata('collection', array('Dublin Core', 'Title'))))) :?>
-			<img src="<?php
-				  try  {
-					 $collection_name = str_replace('(', '', $collection_name );
-					 $collection_name = str_replace(')', '', $collection_name );
-					 echo img($collection_name . '_large.jpg', 'images/programs'); 
-				  } catch (Exception $e) {
-					 echo img('default_large.jpg', 'images/programs');
-				  }
-				  ?>">
+				<?php if ($collection_name = str_replace(' ', '_', strtolower(metadata('collection', array('Dublin Core', 'Title'))))) :?>
+					<?php
+						try  {
+							$collection_name = str_replace('(', '', $collection_name );
+							$collection_name = str_replace(')', '', $collection_name );
+							$filename = $collection_name . '_large.jpg';
+							$alt_text = ucwords(str_replace('_', ' ', preg_replace('/_large\.jpg$/', '', $filename)));
+							echo '<img src="' . img($filename, 'images/programs') . '" alt="' . htmlspecialchars($alt_text) . '" />';
+						} catch (Exception $e) {
+							echo '<img src="' . img('default_large.jpg', 'images/programs') . '" alt="Default Program Image" />';
+						}
+					?>
      	<?php endif; ?>
 
       

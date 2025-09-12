@@ -13,21 +13,22 @@
 	      <div class="grid">
 		<!-- use show-for-medium only if the one-quarter is empty. This prevents empty space on small viewports -->
 		<div class="grid-item one-quarter left-sidebar">
-		  <div class="featured-image">
-			<?php
-				$itemTitles = metadata('item', array('Dublin Core', 'Title'), array('all'=>true));
-				$collection_name = strtolower($itemTitles[1]).'.jpg';
-				$collection_name = str_replace(' ', '_', $collection_name) ;
-			    $collection_name = str_replace('(', '', $collection_name);
-			    $collection_name = str_replace(')', '', $collection_name);
-				?>
-				<img src="<?php
-				  try  {
-					 echo img($collection_name, 'images/collection_images'); 
-				  } catch (Exception $e) {
-					 echo img('default.jpg', 'images/collection_images');
-				  }
-				  ?>">
+				<div class="featured-image">
+					<?php
+						$itemTitles = metadata('item', array('Dublin Core', 'Title'), array('all'=>true));
+						$collection_name = strtolower($itemTitles[1]).'.jpg';
+						$collection_name = str_replace(' ', '_', $collection_name) ;
+						$collection_name = str_replace('(', '', $collection_name);
+						$collection_name = str_replace(')', '', $collection_name);
+						$alt_text = ucwords(str_replace('_', ' ', preg_replace('/\.jpg$/', '', $collection_name)));
+					?>
+					<?php
+						try  {
+							echo '<img src="' . img($collection_name, 'images/collection_images') . '" alt="' . htmlspecialchars($alt_text) . '" />';
+						} catch (Exception $e) {
+							echo '<img src="' . img('default.jpg', 'images/collection_images') . '" alt="Default Program Image" />';
+						}
+					?>
 		  </div>
 		  <nav>
 		    <ul>

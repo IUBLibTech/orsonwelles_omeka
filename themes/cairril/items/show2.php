@@ -16,10 +16,12 @@
 		  <div class="featured-image">
 			<?php if (true): 
 				$collection_name = str_replace(' ', '_', strtolower(metadata('item', 'Collection Name'))) ;
-			    $collection_name = str_replace('(', '', $collection_name);
-			    $collection_name = str_replace(')', '', $collection_name);
-				?>
-				<img src="<?php echo img($collection_name . '.jpg', 'images/collection_images'); ?>" />
+				$collection_name = str_replace('(', '', $collection_name);
+				$collection_name = str_replace(')', '', $collection_name);
+				$filename = $collection_name . '.jpg';
+				$alt_text = ucwords(str_replace('_', ' ', preg_replace('/\.jpg$/', '', $filename)));
+			?>
+				<img src="<?php echo img($filename, 'images/collection_images'); ?>" alt="<?php echo htmlspecialchars($alt_text); ?>" />
 			<?php endif; ?>
 		  </div>
 		  <nav>
