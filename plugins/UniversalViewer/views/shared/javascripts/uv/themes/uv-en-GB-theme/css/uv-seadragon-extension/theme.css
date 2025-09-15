@@ -506,14 +506,18 @@
   margin-top: 6px;
 }
 #app .headerPanel .total {
+  cursor: help;
   float: left;
   display: block;
   height: 18px;
   line-height: 18px;
   margin: 6px 5px 0 5px;
-  width: 41px;
+  min-width: 41px;
+  max-width: 100%;
   font-size: 11px;
-  overflow: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 #app .centerPanel .content {
   position: relative;

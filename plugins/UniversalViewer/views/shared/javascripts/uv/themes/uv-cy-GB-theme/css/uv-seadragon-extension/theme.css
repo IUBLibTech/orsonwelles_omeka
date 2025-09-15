@@ -13,7 +13,8 @@
 #app .overlay.share .middle .content .tabs .tab {
   line-height: normal;
   color: #565656;
-  font-size: 12px;
+  appearance: none;
+  -webkit-appearance: none;
   display: inline-block;
   text-align: center;
   line-height: 22px;
@@ -380,6 +381,8 @@
   float: left;
   margin: 0 0 0 5px;
   width: 113px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 #app .headerPanel .centerOptions .search .searchText {
   border: none;
@@ -515,7 +518,9 @@
   margin: 6px 5px 0 5px;
   width: 41px;
   font-size: 11px;
-  overflow: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 #app .centerPanel .content {
   position: relative;
@@ -1649,6 +1654,7 @@ input[type="button"].btn-block {
 }
 /* WebKit */
 input[type=range] {
+  appearance: none;
   -webkit-appearance: none;
 }
 input[type=range]::-webkit-slider-runnable-track {
