@@ -19,6 +19,8 @@
   line-height: 22px;
   height: 22px;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   width: 75px;
   margin: 0;
   cursor: pointer;
@@ -513,7 +515,7 @@
   margin: 6px 5px 0 5px;
   width: 41px;
   font-size: 11px;
-  overflow: hidden;
+  overflow: auto;
 }
 #app .centerPanel .content {
   position: relative;
